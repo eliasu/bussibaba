@@ -1,3 +1,18 @@
+<div class="logo-section">
+  <div class="b-letters">
+    <img id="b-letter-1" src="/assets/website-assets/b/frame-2.svg" alt="B" class="b-letter">
+    <img id="b-letter-2" src="/assets/website-assets/b/frame-3.svg" alt="B" class="b-letter">
+    <img id="b-letter-3" src="/assets/website-assets/b/frame-4.svg" alt="B" class="b-letter">
+  </div>
+  <div class="bussibaba-logo">
+    <img src="/assets/website-assets/bussibaba.svg" alt="Bussibaba">
+  </div>
+</div>
+
+<div class="band-description">
+  Wiener Mundart, Groove und ehrliche Texte: Bussi Baba mischt funky Rhythmen und Emotion zu einem Sound der berührt und bewegt.
+</div>
+
 <div class="scroll_gallery" data-gallery-path="/assets/gallery">
   
   {{ assets container="assets" folder="gallery" sort="random" }}
@@ -6,3 +21,150 @@
     </figure>
   {{ /assets }}
 </div>
+
+<a href="#booking" class="booking-button">Schreib Uns</a>
+
+<!-- Audio Player -->
+<div class="audio-player">
+  <button class="audio-prev" id="prevBtn">⏮</button>
+  <button class="audio-play" id="playBtn">⏵</button>
+  <button class="audio-next" id="nextBtn">⏭</button>
+  <div class="audio-track" id="trackName">Hawara</div>
+</div>
+
+<audio id="audioElement">
+  <source src="/assets/music/hawara-bussibaba.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const audio = document.getElementById('audioElement');
+const playBtn = document.getElementById('playBtn');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const trackName = document.getElementById('trackName');
+
+const tracks = [
+  { name: 'Hawara', src: '/assets/music/hawara-bussibaba.mp3' },
+  { name: 'Nur Nicht Frei', src: '/assets/music/nur-nicht-frei-bussibaba.mp3' }
+];
+
+let currentTrack = 0;
+
+function loadTrack(index, autoplay = false) {
+  trackName.style.opacity = '0';
+  setTimeout(() => {
+    audio.src = tracks[index].src;
+    trackName.textContent = tracks[index].name;
+    trackName.style.opacity = '1';
+    if (autoplay) {
+      audio.play();
+      playBtn.textContent = '⏸';
+    }
+  }, 200);
+}
+
+playBtn.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    playBtn.textContent = '⏸';
+  } else {
+    audio.pause();
+    playBtn.textContent = '⏵';
+  }
+});
+
+prevBtn.addEventListener('click', () => {
+  const wasPlaying = !audio.paused;
+  currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+  loadTrack(currentTrack, wasPlaying);
+});
+
+nextBtn.addEventListener('click', () => {
+  const wasPlaying = !audio.paused;
+  currentTrack = (currentTrack + 1) % tracks.length;
+  loadTrack(currentTrack, wasPlaying);
+});
+
+audio.addEventListener('ended', () => {
+  playBtn.textContent = '⏵';
+});
+
+loadTrack(0);
+</script>
+
+<style>
+.booking-button {
+  position: fixed;
+  bottom: 3rem;
+  left: 3rem;
+  padding: 2rem 4rem;
+  background-color: #0c010e;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  transition: background-color 0.2s ease;
+  z-index: 1000;
+}
+
+.booking-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.audio-player {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background-color: #0c010e;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  z-index: 1000;
+}
+
+.audio-player button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.2s ease;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.audio-player button:hover {
+  color: #ccc;
+}
+
+.audio-track {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-left: 1rem;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.band-description {
+  position: fixed;
+  top: 3rem;
+  left: 3rem;
+  color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  max-width: 30ch;
+  z-index: 1000;
+}
+</style>

@@ -1,21 +1,22 @@
 <main>
-  <div class="logo-section">
-    <div class="b-letters">
-      <img id="b-letter-1" src="/assets/website-assets/b/frame-2.svg" alt="B" class="b-letter">
-      <img id="b-letter-2" src="/assets/website-assets/b/frame-3.svg" alt="B" class="b-letter">
-      <img id="b-letter-3" src="/assets/website-assets/b/frame-4.svg" alt="B" class="b-letter">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+    <div class="flex flex-row items-center justify-center">
+      <div class="w-1/4 min-w-6 min-sm:-mx-0.5"><img id="b-letter-1" src="/assets/website-assets/b/frame-2.svg" alt="B"></div>
+      <div class="w-1/4 min-w-6 min-sm:-mx-0.5"><img id="b-letter-2" src="/assets/website-assets/b/frame-3.svg" alt="B"></div>
+      <div class="w-1/4 min-w-6 min-sm:-mx-0.5"><img id="b-letter-3" src="/assets/website-assets/b/frame-4.svg" alt="B"></div>
     </div>
-    <p class="bussibaba-logo">
+    <p class=" flex justify-center mt-1 text-4xl">
       bussibaba
     </p>
   </div>
   
-  <h1 class="band-description">
+  <h1 class="fixed bottom-[var(--spacing)] left-[var(--spacing)] text-white text-[length:var(--font-size)] font-normal tracking-[-0.02em] leading-[1.4] max-w-[30ch] z-[1000]">
     Wiener Mundart, Groove und ehrliche Texte: Bussi Baba mischt funky Rhythmen und Emotion zu einem Sound der berührt und bewegt.
   </h1>
   
-  <a href="#booking" class="booking-button">Schreib Uns</a>
+  <a href="#booking" class="fixed top-[var(--spacing)] right-[var(--spacing)] p-[var(--padding)] bg-[#0c010e] text-white no-underline rounded-none text-[length:var(--font-size)] font-normal tracking-[-0.02em] leading-none transition-colors duration-200 ease-in-out z-[1000] hover:bg-white hover:text-black">Schreib Uns</a>
   
+
   
   <div class="scroll_gallery">
     {{ assets container="assets" folder="gallery" sort="random" }}

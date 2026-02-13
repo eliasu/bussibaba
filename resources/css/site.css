@@ -4,11 +4,11 @@
 @source "../views";
 @source "../../content";
 
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 html {
   --su: calc(100vw / 1920 * 10);
@@ -67,98 +67,4 @@ main {
   80% { transform: translate(20%, 5%) }
   90% { transform: translate(-20%, 5%) }
   100% { transform: translate(20%, -5%) }
-}
-
-
-
-.logo-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 2rem;
-  gap: 2rem;
-  position: relative;
-  z-index: 10;
-}
-
-.b-letters {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.b-letter {
-  width: 25vw;
-  height: auto;
-  max-width: 200px;
-  margin: 0 -1.5em;
-}
-
-.bussibaba-logo {
-  display: flex;
-  justify-content: center;
-  width: 60vw;
-  width: 15em;
-  margin-top: 0.5em;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  color: #fff;
-}
-
-.bussibaba-logo img {
-  width: 100%;
-  height: auto;
-}
-
-/* Large screens - maintain current sizing */
-@media (min-width: 1024px) {
-  .b-letter {
-    width: 200px;
-  }
-  
-  .bussibaba-logo {
-    width: 15em;
-  }
-}
-
-
-
-.booking-button {
-  position: fixed;
-  bottom: var(--spacing);
-  left: var(--spacing);
-  padding: var(--padding);
-  background-color: #0c010e;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: var(--font-size);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  transition: background-color 0.2s ease;
-  z-index: 1000;
-}
-
-.booking-button:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-.band-description {
-  position: fixed;
-  top: var(--spacing);
-  left: var(--spacing);
-  color: #fff;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: var(--font-size);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1.4;
-  max-width: 30ch;
-  z-index: 1000;
 }

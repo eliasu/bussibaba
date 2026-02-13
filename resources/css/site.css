@@ -35,7 +35,12 @@
   justify-content: center;
   width: 60vw;
   width: 15em;
-  margin-top: 2em;
+  margin-top: 0.5em;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--font-size);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #fff;
 }
 
 .bussibaba-logo img {
@@ -53,3 +58,147 @@
     width: 15em;
   }
 }
+
+/* Home Page Styles */
+:root {
+  --font-size: clamp(24px, 5vw, 32px);
+  --spacing: clamp(16px, 3vw, 48px);
+  --padding: clamp(16px, 2vw, 32px) clamp(32px, 4vw, 64px);
+}
+
+.booking-button {
+  position: fixed;
+  bottom: var(--spacing);
+  left: var(--spacing);
+  padding: var(--padding);
+  background-color: #0c010e;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--font-size);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  transition: background-color 0.2s ease;
+  z-index: 1000;
+}
+
+.booking-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.audio-player {
+  position: fixed;
+  bottom: var(--spacing);
+  right: var(--spacing);
+  background-color: #0c010e;
+  color: #fff;
+  padding: var(--padding);
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1vw, 1rem);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  z-index: 1000;
+}
+
+.audio-controls {
+  display: flex;
+  gap: clamp(0.5rem, 1vw, 1rem);
+}
+
+.audio-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: var(--font-size);
+  cursor: pointer;
+  width: calc(var(--font-size) * 1.5);
+  height: calc(var(--font-size) * 1.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 0;
+}
+
+.audio-btn:hover {
+  background-color: #fff;
+  color: #0c010e;
+}
+
+.audio-track {
+  font-size: var(--font-size);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  padding: 0 clamp(1rem, 2vw, 1.5rem);
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.band-description {
+  position: fixed;
+  top: var(--spacing);
+  left: var(--spacing);
+  color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: var(--font-size);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  max-width: 30ch;
+  z-index: 1000;
+}
+
+/* Mobile Controls Container */
+.mobile-controls-wrapper {
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .booking-button {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    width: 100%;
+    text-align: center;
+    padding: clamp(2rem, 5vw, 3rem) clamp(2rem, 4vw, 3rem);
+  }
+  
+  .audio-player {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    transform: none;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: clamp(2rem, 5vw, 3rem) clamp(2rem, 4vw, 3rem);
+  }
+  
+  .band-description {
+    max-width: calc(100vw - 2 * var(--spacing));
+  }
+  
+  /* Mobile controls wrapper */
+  .mobile-controls-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    position: fixed;
+    bottom: var(--spacing);
+    left: var(--spacing);
+    right: var(--spacing);
+    z-index: 1000;
+  }
+  
+}
+

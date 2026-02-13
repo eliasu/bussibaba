@@ -37,7 +37,7 @@ class App {
 
     this.gl = this.renderer.gl
 
-    document.body.appendChild(this.gl.canvas)
+    document.querySelector('main').appendChild(this.gl.canvas)
   }
 
   createCamera () {

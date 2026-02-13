@@ -1,41 +1,29 @@
-<div class="logo-section">
-  <div class="b-letters">
-    <img id="b-letter-1" src="/assets/website-assets/b/frame-2.svg" alt="B" class="b-letter">
-    <img id="b-letter-2" src="/assets/website-assets/b/frame-3.svg" alt="B" class="b-letter">
-    <img id="b-letter-3" src="/assets/website-assets/b/frame-4.svg" alt="B" class="b-letter">
+<main>
+  <div class="logo-section">
+    <div class="b-letters">
+      <img id="b-letter-1" src="/assets/website-assets/b/frame-2.svg" alt="B" class="b-letter">
+      <img id="b-letter-2" src="/assets/website-assets/b/frame-3.svg" alt="B" class="b-letter">
+      <img id="b-letter-3" src="/assets/website-assets/b/frame-4.svg" alt="B" class="b-letter">
+    </div>
+    <p class="bussibaba-logo">
+      bussibaba
+    </p>
   </div>
-  <div class="bussibaba-logo">
-    bussibaba
-  </div>
-</div>
-
-<div class="band-description">
-  Wiener Mundart, Groove und ehrliche Texte: Bussi Baba mischt funky Rhythmen und Emotion zu einem Sound der berührt und bewegt.
-</div>
-
-<div class="scroll_gallery" data-gallery-path="/assets/gallery">
   
-  {{ assets container="assets" folder="gallery" sort="random" }}
-    <figure class="scroll_gallery__figure">
-      <img class="scroll_gallery__image" src="{{ url }}">
-    </figure>
-  {{ /assets }}
-</div>
-
-<a href="#booking" class="booking-button">Schreib Uns</a>
-
-<!-- Audio Player -->
-<div class="audio-player">
-  <div class="audio-controls">
-    <button class="audio-btn" id="prevBtn">⏮</button>
-    <button class="audio-btn" id="playBtn">⏵</button>
-    <button class="audio-btn" id="nextBtn">⏭</button>
+  <h1 class="band-description">
+    Wiener Mundart, Groove und ehrliche Texte: Bussi Baba mischt funky Rhythmen und Emotion zu einem Sound der berührt und bewegt.
+  </h1>
+  
+  <a href="#booking" class="booking-button">Schreib Uns</a>
+  
+  
+  <div class="scroll_gallery">
+    {{ assets container="assets" folder="gallery" sort="random" }}
+      <figure class="scroll_gallery__figure">
+        <img class="scroll_gallery__image" src="{{ url }}">
+      </figure>
+    {{ /assets }}
   </div>
-  <div class="audio-track" id="trackName">Hawara</div>
-</div>
 
-<audio id="audioElement">
-  <source src="/assets/music/hawara-bussibaba.mp3" type="audio/mpeg">
-</audio>
-
-<script src="/js/audio-player.js"></script>
+  <div id="grain"></div>
+</main>

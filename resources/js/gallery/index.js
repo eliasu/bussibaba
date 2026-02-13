@@ -51,14 +51,14 @@ class App {
   }
 
   createGallery () {
-    this.gallery = document.querySelector('.demo-1__gallery')
+    this.gallery = document.querySelector('.scroll_gallery')
     
     // Randomize image order on each page load
     this.shuffleGalleryImages()
   }
   
   shuffleGalleryImages () {
-    const figures = Array.from(this.gallery.querySelectorAll('.demo-1__gallery__figure'))
+    const figures = Array.from(this.gallery.querySelectorAll('.scroll_gallery__figure'))
     
     // Fisher-Yates shuffle algorithm
     for (let i = figures.length - 1; i > 0; i--) {
@@ -74,7 +74,7 @@ class App {
   }
 
   createMedias () {
-    this.mediasElements = document.querySelectorAll('.demo-1__gallery__figure')
+    this.mediasElements = document.querySelectorAll('.scroll_gallery__figure')
 
     this.medias = Array.from(this.mediasElements).map(element => {
       let media = new Media({

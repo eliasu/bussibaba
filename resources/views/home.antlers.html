@@ -1,23 +1,33 @@
-<main>
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-    <div class="flex flex-row items-center justify-center">
-      <div class="w-1/4 min-w-6 min-sm:-mx-0.5"><img id="b-letter-1" src="/assets/website-assets/b/frame-2.svg" alt="B"></div>
-      <div class="w-1/4 min-w-6 min-sm:-mx-0.5"><img id="b-letter-2" src="/assets/website-assets/b/frame-3.svg" alt="B"></div>
-      <div class="w-1/4 min-w-6 min-sm:-mx-0.5"><img id="b-letter-3" src="/assets/website-assets/b/frame-4.svg" alt="B"></div>
+<main class="bg-dark text-light h-full inset-0 fixed w-full text-dynamic fixed">
+  <!-- absolute positioned center logo wrapper -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+    <div id="b-letters" class="flex flex-row items-center justify-center"
+         data-base-path="/assets/website-assets/b/"
+         data-frames="{{ assets container='assets' folder='website-assets/b' }}{{ basename }}{{ unless last }},{{ /unless }}{{ /assets }}">
+      <div class="md:w-1/4 min-w-20 -mx-[2%]"><img id="b-letter-1" src="/assets/website-assets/b/frame-2.svg" alt="B"></div>
+      <div class="md:w-1/4 min-w-20 -mx-[2%]"><img id="b-letter-2" src="/assets/website-assets/b/frame-3.svg" alt="B"></div>
+      <div class="md:w-1/4 min-w-20 -mx-[2%]"><img id="b-letter-3" src="/assets/website-assets/b/frame-4.svg" alt="B"></div>
     </div>
-    <p class=" flex justify-center mt-1 text-4xl">
+    <p class=" flex justify-center mt-2 text-4xl">
       bussibaba
     </p>
   </div>
   
-  <h1 class="fixed bottom-[var(--spacing)] left-[var(--spacing)] text-white text-[length:var(--font-size)] font-normal tracking-[-0.02em] leading-[1.4] max-w-[30ch] z-[1000]">
-    Wiener Mundart, Groove und ehrliche Texte: Bussi Baba mischt funky Rhythmen und Emotion zu einem Sound der berührt und bewegt.
-  </h1>
+  <div class="w-full h-full flex gap-4 md:gap-0 flex-col justify-between align-items-start md:grid grid-cols-2 grid-rows-2 p-big z-10 relative bg-gradient-to-b from-transparent sm:to-dark/50 to-dark/90">
+    
+    <!-- band description -->
+    <h1 class="text-light order-2 font-normal sm:max-w-[35ch] row-start-2 col-start-1 self-start sm:self-end">
+      Wiener Mundart, Groove und ehrliche Texte: Bussi Baba mischt funky Rhythmen und Emotion zu einem Sound der berührt und bewegt.
+    </h1>
   
-  <a href="#booking" class="fixed top-[var(--spacing)] right-[var(--spacing)] p-[var(--padding)] bg-[#0c010e] text-white no-underline rounded-none text-[length:var(--font-size)] font-normal tracking-[-0.02em] leading-none transition-colors duration-200 ease-in-out z-[1000] hover:bg-white hover:text-black">Schreib Uns</a>
-  
+    <!-- booking button -->
+    <a href="mailto:hallo@bussibaba.band" class="px-big py-medium w-full sm:w-auto text-center bg-dark text-light no-underline rounded-none transition-colors duration-200 ease-in-out hover:bg-light hover:text-black row-start-1 col-start-2 self-start justify-self-end p-dynamic">Schreib Uns</a>
+  </div>
 
   
+  
+
+  <!-- gallery -->
   <div class="scroll_gallery">
     {{ assets container="assets" folder="gallery" sort="random" }}
       <figure class="scroll_gallery__figure">
@@ -26,5 +36,6 @@
     {{ /assets }}
   </div>
 
+  <!-- grain overlay -->
   <div id="grain"></div>
 </main>

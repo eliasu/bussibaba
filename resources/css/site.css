@@ -4,11 +4,14 @@
 @source "../views";
 @source "../../content";
 
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
+@theme {
+  --color-dark: #0d050e;
+  --color-light: #fff;
+  --text-dynamic: clamp(1.5rem, 5vw, 2rem);
+  --spacing-big: clamp(1rem, 5vw, 4rem);
+  --spacing-medium: clamp(0.5rem, 5vw, 2rem);
+}
+
 
 html {
   --su: calc(100vw / 1920 * 10);
@@ -16,27 +19,8 @@ html {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* Home Page Styles */
-:root {
-  --font-size: clamp(1.5rem, 5vw, 2rem);
-  --spacing: clamp(1rem, 3vw, 3rem);
-  --padding: clamp(1rem, 2vw, 2rem) clamp(2rem, 4vw, 4rem);
-}
-
 img {
   display: block;
-}
-
-
-main {
-  background: #0d050e;
-  color: #fff;
-  height: 100%;
-  inset: 0;
-  position: fixed;
-  user-select: none;
-  width: 100%;
-  font-size: var(--font-size);
 }
 
 #grain {

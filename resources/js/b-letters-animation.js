@@ -1,21 +1,7 @@
-// Array of all available b-letter SVG filenames
-const bLetterFrames = [
-  'frame-2.svg',
-  'frame-3.svg',
-  'frame-4.svg',
-  'frame-5.svg',
-  'frame-6.svg',
-  'frame-7.svg',
-  'frame-8.svg',
-  'frame-9.svg',
-  'frame-10.svg',
-  'frame-11.svg',
-  'frame-12.svg',
-  'frame-13.svg',
-  'frame-14.svg',
-  'frame-15.svg',
-  'frame-16.svg'
-];
+// Read available b-letter SVG filenames and base path from the DOM
+const container = document.getElementById('b-letters');
+const basePath = container?.dataset.basePath || '/assets/website-assets/b/';
+const bLetterFrames = (container?.dataset.frames || '').split(',').filter(Boolean);
 
 // Function to get a random frame different from the current one
 function getRandomFrame(currentFrame) {
@@ -32,7 +18,7 @@ function changeLetter(elementId) {
   const currentFrame = currentSrc.split('/').pop();
   const newFrame = getRandomFrame(currentFrame);
   
-  img.src = `/assets/website-assets/b/${newFrame}`;
+  img.src = `${basePath}${newFrame}`;
 }
 
 // Start the animation when the page loads

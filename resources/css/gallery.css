@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #0c0c0c;
+  color: #fff;
+  font-size: calc(100vw / 1920 * 10);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  user-select: none;
+  width: 100%;
+}
+
+body {
+  font-size: 15px;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+
+body::after {
+  animation: grain 6s steps(10) infinite;
+  background-image: url('../../../public/assets/website-assets/grain.png');
+  background-repeat: repeat;
+  content: '';
+  height: 300%;
+  left: -100%;
+  opacity: 0.06;
+  pointer-events: none;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+  will-change: transform;
+  z-index: 3;
+}
+
+img {
+  display: block;
+}
+
+canvas {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+@keyframes grain {
+  0% { transform: translate(20%, -15%) }
+  10% { transform: translate(-20%, -15%) }
+  20% { transform: translate(20%, -5%) }
+  30% { transform: translate(-20%, -5%) }
+  40% { transform: translate(20%, 5%) }
+  50% { transform: translate(-20%, 5%) }
+  60% { transform: translate(20%, 15%) }
+  70% { transform: translate(-20%, 15%) }
+  80% { transform: translate(20%, 5%) }
+  90% { transform: translate(-20%, 5%) }
+  100% { transform: translate(20%, -5%) }
+}
+
+.demo-1__gallery {
+  height: 295rem;
+  position: relative;
+  visibility: hidden;
+}
+
+.demo-1__gallery__figure {
+  position: absolute;
+}
+
+.demo-1__gallery__figure:nth-child(1) {
+  height: 40rem;
+  width: 70rem;
+}
+
+.demo-1__gallery__figure:nth-child(2) {
+  height: 50rem;
+  left: 85rem;
+  top: 30rem;
+  width: 40rem;
+}
+
+.demo-1__gallery__figure:nth-child(3) {
+  height: 50rem;
+  left: 15rem;
+  top: 60rem;
+  width: 60rem;
+}
+
+.demo-1__gallery__figure:nth-child(4) {
+  height: 30rem;
+  right: 0;
+  top: 10rem;
+  width: 50rem;
+}
+
+.demo-1__gallery__figure:nth-child(5) {
+  height: 60rem;
+  right: 15rem;
+  top: 55rem;
+  width: 40rem;
+}
+
+.demo-1__gallery__figure:nth-child(6) {
+  height: 75rem;
+  left: 5rem;
+  top: 120rem;
+  width: 57.5rem;
+}
+
+.demo-1__gallery__figure:nth-child(7) {
+  height: 70rem;
+  right: 0;
+  top: 130rem;
+  width: 50rem;
+}
+
+.demo-1__gallery__figure:nth-child(8) {
+  height: 50rem;
+  left: 85rem;
+  top: 95rem;
+  width: 40rem;
+}
+
+.demo-1__gallery__figure:nth-child(9) {
+  height: 65rem;
+  left: 75rem;
+  top: 155rem;
+  width: 50rem;
+}
+
+.demo-1__gallery__figure:nth-child(10) {
+  height: 43rem;
+  right: 0;
+  top: 215rem;
+  width: 30rem;
+}
+
+.demo-1__gallery__figure:nth-child(11) {
+  height: 50rem;
+  left: 70rem;
+  top: 235rem;
+  width: 80rem;
+}
+
+.demo-1__gallery__figure:nth-child(12) {
+  left: 0;
+  top: 210rem;
+  height: 70rem;
+  width: 50rem;
+}
+
+@media (max-width: 1200px) {
+  .demo-1__gallery {
+    height: 650rem;
+  }
+
+  .demo-1__gallery__figure:nth-child(1) {
+    height: 60rem;
+    width: 100rem;
+  }
+
+  .demo-1__gallery__figure:nth-child(2) {
+    height: 110rem;
+    left: auto;
+    right: 0;
+    top: 25rem;
+    width: 70rem;
+  }
+
+  .demo-1__gallery__figure:nth-child(3) {
+    height: 80rem;
+    left: 12rem;
+    top: 80rem;
+    width: 89rem;
+  }
+
+  .demo-1__gallery__figure:nth-child(4) {
+    height: 60rem;
+    right: 0;
+    top: 153rem;
+    width: 60rem;
+  }
+
+  .demo-1__gallery__figure:nth-child(5) {
+    height: 110rem;
+    left: 0;
+    right: auto;
+    top: 180rem;
+    width: 70rem;
+  }
+
+  .demo-1__gallery__figure:nth-child(6) {
+    height: 135rem;
+    left: 95rem;
+    top: 230rem;
+    width: 87.5rem;
+  }
+
+  .demo-1__gallery__figure:nth-child(7) {
+    height: 110rem;
+    left: 0;
+    right: auto;
+    top: 310rem;
+    width: 80rem;
+  }
+
+  .demo-1__gallery__figure:nth-child(8) {
+    height: 50rem;
+    left: auto;
+    right: 0;
+    top: 385rem;
+    width: 80rem;
+  }
+
+  .demo-1__gallery__figure:nth-child(9) {
+    height: 100rem;
+    left: 110rem;
+    top: 450rem;
+    width: 70rem;
+  }
+
+  .demo-1__gallery__figure:nth-child(10) {
+    height: 50rem;
+    left: 20rem;
+    right: auto;
+    top: 440rem;
+    width: 55rem;
+  }
+
+  .demo-1__gallery__figure:nth-child(11) {
+    height: 70rem;
+    left: auto;
+    right: 0;
+    top: 570rem;
+    width: 70rem;
+  }
+
+  .demo-1__gallery__figure:nth-child(12) {
+    left: 0;
+    top: 515rem;
+    height: 100rem;
+    width: 90rem;
+  }
+}
+
+.demo-1__gallery__image {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

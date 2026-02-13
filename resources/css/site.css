@@ -9,7 +9,7 @@
   --color-light: #fff;
   --text-dynamic: clamp(1.5rem, 5vw, 2rem);
   --spacing-big: clamp(1rem, 5vw, 4rem);
-  --spacing-medium: clamp(0.5rem, 5vw, 2rem);
+  --spacing-medium: clamp(0.5rem, 5vw, 1.25rem);
 }
 
 

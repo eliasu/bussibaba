@@ -1,8 +1,11 @@
 ---
-title: Home
 id: home
-template: home
 blueprint: pages
+title: 'Bussi Baba'
+template: home
+author: ca7331f7-eded-4279-9af6-7e02c8c2c402
+updated_by: ca7331f7-eded-4279-9af6-7e02c8c2c402
+updated_at: 1771031117
 ---
 ## Welcome to your brand new Statamic site!
 

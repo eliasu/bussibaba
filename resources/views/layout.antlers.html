@@ -4,7 +4,25 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title ?? site:name }}</title>
+        
+        <!-- SEO & Metadata -->
+        <title>Bussi Baba</title>
+        <meta name="description" content='Wiener Mundart, Groove und ehrliche Texte: Bussi Baba mischt funky Rhythmen und Emotion zu einem Sound der berührt und bewegt.'>
+        <link rel="canonical" href="{{ current_url }}">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/assets/website-assets/favicon.png">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="{{ seo_title ?? title ?? seo:site_name }}">
+        <meta property="og:description" content="Wiener Mundart, Groove und ehrliche Texte: Bussi Baba mischt funky Rhythmen und Emotion zu einem Sound der berührt und bewegt.">
+        <meta property="og:url" content="{{ current_url }}">
+        <meta property="og:site_name" content="Bussi Baba">
+        <meta property="og:locale" content="{{ site:short_locale }}">
+        <meta property="og:type" content="website">
+
+        <!-- Open Graph Image -->
+        <meta property="og:image" content="{{ asset url='/assets/website-assets/og-image.jpg' }}{{ url }}{{ /asset }}">
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
     <body>

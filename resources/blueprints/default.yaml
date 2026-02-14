@@ -20,3 +20,38 @@ fields:
       type: template
       display: Template
       localizable: true
+  -
+    handle: seo
+    field:
+      type: section
+      display: SEO
+      instructions: 'Manage SEO settings for this page.'
+      listable: hidden
+  -
+    handle: seo_title
+    field:
+      type: text
+      display: 'SEO Title'
+      instructions: 'Override the default title.'
+      localizable: true
+      width: 50
+  -
+    handle: og_image
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      type: assets
+      display: 'Social Image'
+      instructions: 'Specific image for social sharing.'
+      localizable: true
+      width: 50
+  -
+    handle: seo_description
+    field:
+      type: textarea
+      display: 'SEO Description'
+      instructions: 'Override the default description.'
+      localizable: true

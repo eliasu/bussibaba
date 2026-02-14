@@ -7,7 +7,7 @@
 @theme {
   --color-dark: #0d050e;
   --color-light: #fff;
-  --text-dynamic: clamp(1.5rem, 5vw, 2rem);
+  --text-dynamic: clamp(1.2rem, 5vw, 2rem);
   --spacing-big: clamp(1rem, 5vw, 4rem);
   --spacing-medium: clamp(0.5rem, 5vw, 1.25rem);
 }
@@ -29,13 +29,13 @@ img {
   background-repeat: repeat;
   height: 300%;
   left: -100%;
-  opacity: 0.06;
+  opacity: 0.08;
   pointer-events: none;
   position: fixed;
   top: -100%;
   width: 300%;
   will-change: transform;
-  z-index: 3;
+  z-index: 20;
   pointer-events: none;
 }
 
@@ -51,4 +51,10 @@ img {
   80% { transform: translate(20%, 5%) }
   90% { transform: translate(-20%, 5%) }
   100% { transform: translate(20%, -5%) }
+}
+
+
+pjsdiv * {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 600;
 }

@@ -16,12 +16,33 @@
   <div class="w-full h-full flex gap-4 md:gap-0 flex-col justify-between align-items-start md:grid grid-cols-2 grid-rows-2 p-big z-10 relative bg-gradient-to-b from-transparent sm:to-dark/50 to-dark/90">
     
     <!-- band description -->
-    <h1 class="text-light order-2 font-normal sm:max-w-[35ch] row-start-2 col-start-1 self-start sm:self-end">
+    <h1 class="text-light order-2 font-normal md:max-w-[35ch] row-start-2 col-start-1 self-start sm:self-end mt-auto md:mt-0">
       Wiener Mundart, Groove und ehrliche Texte: Bussi Baba mischt funky Rhythmen und Emotion zu einem Sound der berührt und bewegt.
     </h1>
   
     <!-- booking button -->
-    <a href="mailto:hallo@bussibaba.band" class="px-big py-medium w-full sm:w-auto text-center bg-dark text-light no-underline rounded-none transition-colors duration-200 ease-in-out hover:bg-light hover:text-black row-start-1 col-start-2 self-start justify-self-end p-dynamic">Schreib Uns</a>
+    <a href="mailto:hallo@bussibaba.band" class="px-big py-medium w-full sm:w-auto text-center bg-dark text-light no-underline rounded-none transition-colors duration-200 ease-in-out hover:bg-light hover:text-black row-start-1 col-start-2 self-start justify-self-end p-dynamic order-3">Schreib Uns</a>
+    
+    <!-- music player -->
+    <div class="row-start-2 col-start-2 self-end justify-self-end w-full md:max-w-96">
+       <div id="player"></div>
+       <script src="/js/playerjs.js"></script>
+       <script>
+          var player = new Playerjs({
+             id: "player",
+             file: [
+                {
+                   "title": "Hawara",
+                   "file": "/assets/music/hawara-bussibaba.mp3"
+                },
+                {
+                   "title": "Nur nicht frei",
+                   "file": "/assets/music/nur-nicht-frei-bussibaba.mp3"
+                }
+             ]
+          });
+       </script>
+    </div>
   </div>
 
   

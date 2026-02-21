@@ -1,10 +1,10 @@
-<main class="bg-dark text-light h-full inset-0 fixed w-full text-dynamic fixed">
+<main class="fixed inset-0 w-full h-full bg-dark text-light text-dynamic">
   
   
   
-  <div class="w-full h-full flex gap-4 md:gap-0 flex-col justify-between align-items-start md:grid grid-cols-2 grid-rows-2 p-big z-10 relative bg-gradient-to-b from-transparent sm:to-dark/50 to-dark/90">
+  <div class="relative z-10 flex flex-col justify-between w-full h-full grid-cols-2 grid-rows-2 gap-4 md:gap-0 align-items-start md:grid p-big bg-gradient-to-b from-transparent sm:to-dark/50 to-dark/90">
     <!-- absolute positioned center logo wrapper -->
-    <div class="md:absolute top-1/2 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 z-20 ">
+    <div class="z-20 md:absolute top-1/2 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 ">
       <div id="b-letters" class="flex flex-row items-center justify-center"
           data-base-path="/assets/website-assets/b/"
           data-frames="{{ assets container='assets' folder='website-assets/b' }}{{ basename }}{{ unless last }},{{ /unless }}{{ /assets }}">
@@ -12,7 +12,7 @@
         <div class="md:w-1/4 min-w-20 -mx-[2%]"><img id="b-letter-2" src="/assets/website-assets/b/frame-3.svg" alt="B"></div>
         <div class="md:w-1/4 min-w-20 -mx-[2%]"><img id="b-letter-3" src="/assets/website-assets/b/frame-4.svg" alt="B"></div>
       </div>
-      <p class=" flex justify-center mt-2 text-4xl">
+      <p class="flex justify-center mt-2 text-4xl ">
         bussibaba
       </p>
     </div>
@@ -24,18 +24,18 @@
     </h1>
   
     <!-- booking button -->
-    <div class="flex col-span-2 justify-end items-start gap-2 sm:gap-5 max-md:flex-col order-10">
-      <a href="mailto:hallo@bussibaba.band" class="whitespace-nowrap px-big py-medium w-full sm:w-auto text-center bg-dark text-light no-underline rounded-none transition-colors duration-200 ease-in-out hover:bg-light hover:text-black p-dynamic order-3" target="_blank">Schreib Uns</a>
+    <div class="flex justify-end order-10 col-span-2 gap-2 md:items-start sm:gap-5 max-md:flex-col">
+      <a href="mailto:hallo@bussibaba.band" class="order-3 w-full text-center no-underline transition-colors duration-200 ease-in-out rounded-none whitespace-nowrap px-big py-medium sm:w-auto bg-dark text-light hover:bg-light hover:text-black p-dynamic" target="_blank">Schreib Uns</a>
       
-      <a href="https://www.instagram.com/bussibababerlin/" class="whitespace-nowrap px-big py-medium w-full sm:w-auto text-center bg-dark text-light no-underline rounded-none transition-colors duration-200 ease-in-out hover:bg-light hover:text-black p-dynamic order-3" target="_blank">Instagram</a>
+      <a href="https://www.instagram.com/bussibababerlin/" class="order-3 w-full text-center no-underline transition-colors duration-200 ease-in-out rounded-none whitespace-nowrap px-big py-medium sm:w-auto bg-dark text-light hover:bg-light hover:text-black p-dynamic" target="_blank">Instagram</a>
       
-      <a href="https://t.me/bussi_baba" class="whitespace-nowrap px-big py-medium w-full sm:w-auto text-center bg-dark text-light no-underline rounded-none transition-colors duration-200 ease-in-out hover:bg-light hover:text-black p-dynamic order-3" target="_blank">Infokanal</a>
+      <a href="https://t.me/bussi_baba" class="order-3 w-full text-center no-underline transition-colors duration-200 ease-in-out rounded-none whitespace-nowrap px-big py-medium sm:w-auto bg-dark text-light hover:bg-light hover:text-black p-dynamic" target="_blank">Infokanal</a>
     </div>
     
     <!-- music player -->
-    <div class="row-start-2 col-start-2 self-end justify-self-end w-full md:max-w-96 order-3 mt-auto">
+    <div class="self-end order-3 w-full col-start-2 row-start-2 mt-auto justify-self-end md:max-w-96">
        <div id="player"></div>
-       <script src="../../js/playerjs.js"></script>
+       <script src="/js/playerjs.js"></script>
        <script>
           var player = new Playerjs({
              id: "player",

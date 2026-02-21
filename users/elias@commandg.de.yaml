@@ -6,6 +6,7 @@ preferences:
   assets:
     assets:
       per_page: 25
+      mode: grid
   collections:
     pages:
       view: tree

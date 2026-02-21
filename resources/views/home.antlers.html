@@ -1,31 +1,39 @@
 <main class="bg-dark text-light h-full inset-0 fixed w-full text-dynamic fixed">
   
-  <!-- absolute positioned center logo wrapper -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-    <div id="b-letters" class="flex flex-row items-center justify-center"
-         data-base-path="/assets/website-assets/b/"
-         data-frames="{{ assets container='assets' folder='website-assets/b' }}{{ basename }}{{ unless last }},{{ /unless }}{{ /assets }}">
-      <div class="md:w-1/4 min-w-20 -mx-[2%]"><img id="b-letter-1" src="/assets/website-assets/b/frame-2.svg" alt="B"></div>
-      <div class="md:w-1/4 min-w-20 -mx-[2%]"><img id="b-letter-2" src="/assets/website-assets/b/frame-3.svg" alt="B"></div>
-      <div class="md:w-1/4 min-w-20 -mx-[2%]"><img id="b-letter-3" src="/assets/website-assets/b/frame-4.svg" alt="B"></div>
-    </div>
-    <p class=" flex justify-center mt-2 text-4xl">
-      bussibaba
-    </p>
-  </div>
+  
   
   <div class="w-full h-full flex gap-4 md:gap-0 flex-col justify-between align-items-start md:grid grid-cols-2 grid-rows-2 p-big z-10 relative bg-gradient-to-b from-transparent sm:to-dark/50 to-dark/90">
-    
+    <!-- absolute positioned center logo wrapper -->
+    <div class="md:absolute top-1/2 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 z-20 ">
+      <div id="b-letters" class="flex flex-row items-center justify-center"
+          data-base-path="/assets/website-assets/b/"
+          data-frames="{{ assets container='assets' folder='website-assets/b' }}{{ basename }}{{ unless last }},{{ /unless }}{{ /assets }}">
+        <div class="md:w-1/4 min-w-20 -mx-[2%]"><img id="b-letter-1" src="/assets/website-assets/b/frame-2.svg" alt="B"></div>
+        <div class="md:w-1/4 min-w-20 -mx-[2%]"><img id="b-letter-2" src="/assets/website-assets/b/frame-3.svg" alt="B"></div>
+        <div class="md:w-1/4 min-w-20 -mx-[2%]"><img id="b-letter-3" src="/assets/website-assets/b/frame-4.svg" alt="B"></div>
+      </div>
+      <p class=" flex justify-center mt-2 text-4xl">
+        bussibaba
+      </p>
+    </div>
+
+
     <!-- band description -->
-    <h1 class="text-light order-2 font-normal md:max-w-[35ch] row-start-2 col-start-1 self-start sm:self-end mt-auto md:mt-0">
+    <h1 class="max-md:hidden text-light order-2 font-normal md:max-w-[35ch] row-start-2 col-start-1 self-start sm:self-end mt-auto md:mt-0">
       Wiener Mundart, Groove und ehrliche Texte: Bussi Baba mischt funky Rhythmen und Emotion zu einem Sound der berührt und bewegt.
     </h1>
   
     <!-- booking button -->
-    <a href="mailto:hallo@bussibaba.band" class="px-big py-medium w-full sm:w-auto text-center bg-dark text-light no-underline rounded-none transition-colors duration-200 ease-in-out hover:bg-light hover:text-black row-start-1 col-start-2 self-start justify-self-end p-dynamic order-3">Schreib Uns</a>
+    <div class="flex col-span-2 justify-end items-start gap-2 sm:gap-5 max-md:flex-col order-10">
+      <a href="mailto:hallo@bussibaba.band" class="whitespace-nowrap px-big py-medium w-full sm:w-auto text-center bg-dark text-light no-underline rounded-none transition-colors duration-200 ease-in-out hover:bg-light hover:text-black p-dynamic order-3" target="_blank">Schreib Uns</a>
+      
+      <a href="https://www.instagram.com/bussibababerlin/" class="whitespace-nowrap px-big py-medium w-full sm:w-auto text-center bg-dark text-light no-underline rounded-none transition-colors duration-200 ease-in-out hover:bg-light hover:text-black p-dynamic order-3" target="_blank">Instagram</a>
+      
+      <a href="https://t.me/bussi_baba" class="whitespace-nowrap px-big py-medium w-full sm:w-auto text-center bg-dark text-light no-underline rounded-none transition-colors duration-200 ease-in-out hover:bg-light hover:text-black p-dynamic order-3" target="_blank">Infokanal</a>
+    </div>
     
     <!-- music player -->
-    <div class="row-start-2 col-start-2 self-end justify-self-end w-full md:max-w-96">
+    <div class="row-start-2 col-start-2 self-end justify-self-end w-full md:max-w-96 order-3 mt-auto">
        <div id="player"></div>
        <script src="/js/playerjs.js"></script>
        <script>
@@ -33,12 +41,14 @@
              id: "player",
              file: [
                 {
-                    "title": "Nur nicht frei",
-                    "file": "/assets/music/nur-nicht-frei-bussibaba.mp3"
+                  "title": "Nur nicht frei",
+                  "file": "/assets/music/nur-nicht-frei-bussibaba.mp3",
+                  "poster" : "/assets/gallery/1.jpeg"
                 },
                 {
-                   "title": "Hawara",
-                   "file": "/assets/music/hawara-bussibaba.mp3"
+                  "title": "Hawara",
+                  "file": "/assets/music/hawara-bussibaba.mp3",
+                  "poster" : "/assets/gallery/img_8663.jpg"
                 }
              ]
           });
@@ -59,5 +69,5 @@
   </div>
 
   <!-- grain overlay -->
-  <div id="grain"></div>
+  <div id="grain" style="background-image: url('/assets/website-assets/grain.png')"></div>
 </main>
